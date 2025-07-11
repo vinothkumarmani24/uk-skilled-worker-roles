@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UK Skilled Worker Visa Eligible Roles</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header>
+        <h1>UK Skilled Worker Visa Eligible Roles</h1>
+        <div class="header-content">
+            <p>Filter roles eligible for supplementary 20% housework allowance</p>
+            <section class="charts-section">
+                <div class="chart-container">
+                    <canvas id="rqfChart"></canvas>
+                </div>
+                <div class="chart-container">
+                    <canvas id="groupChart"></canvas>
+                </div>
+            </section>
+        </div>
+    </header>
+
+    <main>
+        <section class="filter-controls">
+            <div class="filter-group">
+                <label for="rqf-filter">RQF Level</label>
+                <select id="rqf-filter">
+                    <option value="">All Levels</option>
+                    <option value="2">Level 2</option>
+                    <option value="3">Level 3</option>
+                    <option value="4">Level 4</option>
+                    <option value="5">Level 5</option>
+                    <option value="6">Level 6</option>
+                    <option value="7">Level 7</option>
+                </select>
+            </div>
+
+            <div class="filter-group">
+                <label for="job-group-filter">Job Group</label>
+                <select id="job-group-filter">
+                    <option value="">All Groups</option>
+                    <!-- Options will be populated by JavaScript -->
+                </select>
+            </div>
+
+            <div class="filter-group">
+                <label for="search">Search Job Titles</label>
+                <input type="text" id="search" placeholder="Enter job title keywords...">
+            </div>
+        </section>
+
+        <section class="results">
+            <div class="results-header">
+                <h2>Eligible Roles</h2>
+                <span class="count">0 jobs found</span>
+            </div>
+            <div id="results-list"></div>
+        </section>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
